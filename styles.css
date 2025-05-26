@@ -1,0 +1,158 @@
+:root {
+  --color-light: #f8f9fa;
+  --color-dark: #212529;
+  --border-light: rgba(0, 0, 0, 0.1);
+  --border-dark: rgba(255, 255, 255, 0.1);
+  --link-hover: #0d6efd;
+  --link-hover-dark: #66b2ff;
+}
+
+html,
+body {
+  flex: 1;
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark-mode {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+html.dark-mode body {
+  background-color: inherit;
+  color: inherit;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus {
+  color: var(--color-dark);
+  box-shadow: none;
+  border: none;
+}
+
+.theme-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+  z-index: 1050;
+  position: relative;
+}
+
+.js-theme-ready .theme-icon {
+  visibility: visible;
+}
+
+.main-container {
+  height: 60vh;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-content {
+  max-width: 600px;
+}
+
+.nav-link {
+  font-size: 1.25rem;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.dark-mode .navbar-toggler,
+.dark-mode .navbar-toggler:focus,
+.dark-mode .nav-link,
+.dark-mode .nav-link:hover,
+.dark-mode .nav-link.active,
+.dark-mode .nav-link:visited,
+.dark-mode .nav-link:focus {
+  color: var(--color-light);
+  outline: none;
+}
+
+.dark-mode .navbar-toggler {
+  color: var(--border-dark);
+}
+
+.dark-mode .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.link-more {
+  color: inherit;
+  font-weight: 200;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+.link-more:hover {
+  text-decoration: underline;
+}
+
+.arrow-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.link-more:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+.footer {
+  border-top: 1.5px solid var(--border-light);
+  margin: 0 auto;
+  max-width: 20rem;
+  color: inherit;
+}
+
+.dark-mode .footer {
+  border-top: 1.5px solid var(--border-dark);
+  margin: 0 auto;
+  max-width: 20rem;
+}
+
+.footer i {
+  color: var(--color-dark);
+  transition: color 0.3s ease;
+}
+
+.footer i:hover {
+  color: var(--link-hover);
+}
+
+.dark-mode .footer i {
+  color: var(--color-light);
+}
+
+.dark-mode .footer i:hover {
+  color: var(--link-hover-dark);
+}
+
+h6[role="button"] {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+html.dark-mode h6[role="button"] {
+  border-bottom: 1px solid var(--border-dark);
+}
+
+
+h6[role="button"]+.collapse {
+  margin-bottom: 1.5rem;
+}
