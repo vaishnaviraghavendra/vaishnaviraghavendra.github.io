@@ -111,15 +111,15 @@ html.dark-mode body {
   transform: translateX(4px);
 }
 
+
 .footer {
-  border-top: 1.5px solid var(--border-light);
   margin: 0 auto;
   max-width: 20rem;
   color: inherit;
 }
 
+
 .dark-mode .footer {
-  border-top: 1.5px solid var(--border-dark);
   margin: 0 auto;
   max-width: 20rem;
 }
@@ -155,4 +155,30 @@ html.dark-mode h6[role="button"] {
 
 h6[role="button"]+.collapse {
   margin-bottom: 1.5rem;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  display: block;
+  margin: 0 auto 1rem;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+@media (max-width: 576px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-pic {
+    transform: none !important;
+    opacity: 1 !important;
+  }
 }

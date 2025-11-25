@@ -15,44 +15,40 @@
     }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="main.js" defer></script>
-  <script src="animations.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </head>
 
 <body>
-  <div class="d-flex justify-content-between align-items-center py-4 pt-4">
-    <nav class="navbar navbar-expand-lg fixed-top px-5 pt-4">
-      <div class="container-fluid d-flex justify-content-between align-items-center">
-        <div class="d-flex align-items-center">
-          <i class="bi bi-brightness-high-fill theme-icon me-3" id="toggleDark" title="Toggle Theme"></i>
-        </div>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-          aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon open-icon"></span>
-          <span class="close-icon d-none fs-1">&times;</span>
-        </button>
-
-
-        <div class="collapse navbar-collapse justify-content-end px-5" id="navbarMenu">
-          <ul class="navbar-nav flex-column flex-md-row gap-2 px-5 px-md-0 align-items-center justify-content-center">
-            <li class="nav-item"><a class="nav-link" href="#">Work</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link focus" href="#">CV</a></li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg fixed-top px-5 bg-body" style="box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-brightness-high-fill theme-icon me-3" id="toggleDark" title="Toggle Theme"></i>
       </div>
-    </nav>
-  </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon open-icon"></span>
+        <span class="close-icon d-none fs-1">&times;</span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end px-5" id="navbarMenu">
+        <ul class="navbar-nav flex-column flex-md-row gap-2 px-5 px-md-0 align-items-center justify-content-center">
+          <li class="nav-item"><a class="nav-link" href="stories.html">stories</a></li>
+          <li class="nav-separator d-none d-md-inline px-2">|</li>
+          <li class="nav-item"><a class="nav-link focus" href="docs/vaishnavi-cv.pdf" target="_blank" rel="noopener noreferrer">cv</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <main class="pt-5 mt-5">
-    <div class="container-fluid main-container">
+  <main style="padding-top: 90px;">
+      <div class="container-fluid main-container">
       <div class="centered-content text-center">
-        <h1 class="display-4">Hello, I'm Vaishnavi</h1>
+        <img src="pics/pic.jpg" alt="Vaishnavi" class="profile-pic mb-3 mx-auto d-block" loading="lazy" />
+          <h1 class="display-4">Hello, I'm Vaishnavi</h1>
         <p class="lead">
           UI developer exploring design, code, and the in-between.
         </p>
-        <a href="about.html" class="link-more text-decoration-underline">
+        <a href="stories.html" class="link-more text-decoration-underline">
           More <span class="arrow-icon">→</span>
         </a>
       </div>
