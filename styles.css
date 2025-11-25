@@ -182,3 +182,17 @@ h6[role="button"]+.collapse {
     opacity: 1 !important;
   }
 }
+
+/* Theme-aware navbar styles */
+.navbar {
+  background-color: var(--color-light) !important;
+  color: var(--color-dark) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode .navbar {
+  background-color: var(--color-dark) !important;
+  color: var(--color-light) !important;
+}
+.navbar .nav-link, .navbar .nav-separator, .navbar .theme-icon {
+  color: inherit !important;
+}
