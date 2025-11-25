@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const profilePic = document.querySelector(".profile-pic");
   if (profilePic) {
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
     if (prefersReduced) {
       profilePic.style.opacity = 1;
       profilePic.style.transform = "none";
